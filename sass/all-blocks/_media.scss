@@ -1,0 +1,45 @@
+
+
+.media-page{
+    background-image: url(../images/media-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 763px;
+    position: relative;
+    
+}
+.media-page iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+.media {
+
+    padding: 77px 0;
+    height: 763px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__logo {
+        align-self: flex-start;
+    }
+    &__photo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid red;
+        border-radius: 50%;
+        height: 120px;
+        width: 120px;
+        cursor: pointer;
+        margin: 0 auto;
+
+    }
+}
+.media__label-input:checked~.media-page iframe {
+    z-index: 1;
+}
