@@ -1,0 +1,11 @@
+@mixin for-bgtablet-only {
+    @media screen and (max-width:576px) {
+        @content;
+    }
+}
+
+@mixin flexItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

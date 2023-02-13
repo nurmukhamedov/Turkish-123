@@ -1,0 +1,99 @@
+.dishes{
+   padding-top: 20px;
+    background-color: #E5E5E5;
+}
+
+
+.dishes__intro{
+    @include flexItems();
+}
+
+.dishes__intro-title{
+   font: {
+    weight:500;
+    size:48px;
+   }
+    line-height: 48px;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    color: $secondary-color;
+}
+
+.dishes__intro-buttons{
+    column-gap: 20px;
+    @include flexItems();
+}
+
+.dishes__button{
+    border: 1px solid #646464;
+    border-radius: 6px;
+    padding: 10px 15px;
+    transition: all 0.7s ease;
+}
+
+.dishes__button:hover{
+    transform: scale(1.1,1.1);
+    cursor: pointer;
+}
+
+.dishes__cards{
+    margin-top: 50px;
+}
+
+
+.dishes__cards{
+    @include flexItems();
+    column-gap: 20px;
+}
+
+.dishes__card{
+    background: #FFFFFF;
+border-radius: 14px;
+padding: 20px 20px 40px 20px;
+text-align: center;
+transition: all 0.7s ease;
+}
+
+.dishes__card:hover{
+transform: scale(1.1,1.1);
+cursor: pointer;
+}
+
+.dishes__card-image{
+    overflow: hidden;
+}
+
+.dishes__card-image img{
+   transition: all 0.7s ease;
+}
+
+
+.dishes__card-image:hover img{
+    transform: scale(1.1,1.1);
+}
+
+.dishes__card-title{
+    font: {
+        weight: 600;
+        size: 18px;
+    }
+line-height: 25px;
+text-align: center;
+color: $secondary-color;
+margin-bottom: 20px;
+}
+
+.dishes__card-stars i{
+    color: yellow;
+}
+.dishes__card-stars {
+    margin-bottom: 20px;
+}
+
+.dishes__card-cost{
+    font-weight: 700;
+font-size: 24px;
+line-height: 33px;
+text-align: center;
+color: $primary-color;
+}
