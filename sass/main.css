@@ -4,7 +4,6 @@
   list-style: none;
   box-sizing: border-box;
   text-decoration: none;
-  background-color: rgba(50, 139, 50, 0.247);
 }
 
 .container {
@@ -13,12 +12,121 @@
   padding: 0 15px;
 }
 
-.block {
-  width: 700px;
-  height: 600px;
-  background-color: red;
+input[type=checkbox] {
+  display: none;
 }
 
-h1 {
-  font-size: 100px;
+nav {
+  background: #BB2339;
+  padding: 39px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar__bar {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+@media (max-width: 750px) {
+  .navbar__bar {
+    flex-direction: column;
+    row-gap: 40px;
+    justify-content: center;
+    padding: 48px 24px 0 24px;
+    margin-top: 43px;
+    width: 70%;
+    background: #fb0000;
+    height: 667px;
+    transition: 0.5s ease;
+    transform: translate(700px, -300px);
+    position: absolute;
+    top: -46px;
+    right: 0;
+    margin-left: 40px;
+    z-index: 3;
+  }
+}
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+@media (max-width: 750px) {
+  .navbar__menu {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
+.navbar__menu-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.navbar__menu-link:hover {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #6a9fef;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.navbar__btn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 175%;
+  color: #FFFFFF;
+  padding: 12px 28px;
+  border-radius: 24px;
+  border: 1px solid #FFFFFF;
+  background: #BB2339;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+@media (max-width: 750px) {
+  .navbar__btn {
+    padding: 12px 60px;
+  }
+}
+.navbar__btn:hover {
+  background: #FFFFFF;
+  color: #BB2339;
+}
+.navbar__btn:focus {
+  background: #8780be;
+  color: #BB2339;
+  border: 1px solid transparent;
+}
+
+.menu__input:checked ~ .navbar__bar {
+  transform: translateX(0);
+}
+
+.remove__btn {
+  display: none;
+}
+@media (max-width: 750px) {
+  .remove__btn {
+    position: absolute;
+    right: 70px;
+    top: 52px;
+    display: block;
+  }
+}
+
+.hamburger__btn {
+  display: none;
+}
+@media (max-width: 750px) {
+  .hamburger__btn {
+    display: block;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,142 @@
+
+@mixin for-nav {
+    @media (max-width: 750px) {
+        @content;
+    }
+}
+
+
+
+
+input[type="checkbox"]{
+    display: none;
+}
+
+
+
+nav{
+    background: #BB2339;
+    padding: 39px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+   
+
+
+    &__bar{
+        display: flex;
+    align-items: center;
+    column-gap: 40px;
+
+
+
+  @include for-nav(){
+    flex-direction: column;
+    row-gap: 40px;
+            justify-content: center;
+            padding: 48px 24px 0 24px;
+            margin-top: 43px;
+            width: 70%;
+            background: #fb0000;
+            height: 667px;
+            transition: 0.5s ease;
+            transform: translate(700px , -300px);
+            position: absolute;
+            top: -46px;
+            right: 0;
+            margin-left: 40px;
+            z-index: 3;
+            
+    
+  }
+
+
+    }
+
+
+
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+    
+        @include for-nav(){
+            flex-direction: column;
+            row-gap: 40px;
+        }
+
+
+        &-link{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: 0.5s ease;
+
+        }
+        &-link:hover{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #6a9fef;
+            cursor: pointer;
+            transition: 0.5s ease;
+            
+        }
+    }
+
+
+    &__btn{
+        font-weight: 600;
+font-size: 16px;
+line-height: 175%;
+color: #FFFFFF;
+padding: 12px 28px ;
+border-radius: 24px;
+border: 1px solid #FFFFFF;
+background: #BB2339 ;
+cursor: pointer;
+transition: 0.5s ease;
+
+
+        @include for-nav(){
+            padding: 12px 60px;
+        }
+    }
+    &__btn:hover{
+        background: #FFFFFF;
+        color: #BB2339;
+    }
+    &__btn:focus{
+        background: #8780be;
+        color: #BB2339;
+        border: 1px solid transparent;
+    }
+}
+
+.menu__input:checked~.navbar__bar {
+    transform: translateX(0);
+}
+.remove__btn{
+    display: none;
+
+    @include for-nav(){
+     position: absolute;
+     right: 70px;
+     top: 52px;
+    display: block;
+    }
+ }
+
+ .hamburger__btn{
+    display: none;
+
+    @include for-nav(){
+        display: block;
+    }
+ }

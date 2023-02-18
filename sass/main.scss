@@ -8,7 +8,7 @@
     list-style: none;
     box-sizing: border-box;
     text-decoration: none;
-    background-color: rgba(50, 139, 50, 0.247);
+ 
 }
 
 .container {
@@ -17,14 +17,5 @@
     padding: 0 15px;
 }
 
-.block {
-    width: 700px;
-    height: 600px;
-    background-color: red;
-}
-
-h1 {
-    font-size: 100px
-}
 
 @import './all-blocks/all-blocks';
