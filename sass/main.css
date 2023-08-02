@@ -3,7 +3,6 @@
   margin: 0;
   list-style: none;
   box-sizing: border-box;
-  text-decoration: none;
 }
 
 .container {
@@ -44,8 +43,9 @@ h1 {
   display: flex;
   align-items: center;
   -moz-column-gap: 25px;
-       column-gap: 25px;
+  column-gap: 25px;
 }
+
 @media (max-width: 992px) {
   .Happy-customers__cards {
     flex-direction: column;
@@ -74,4 +74,6 @@ h1 {
   display: flex;
   justify-content: center;
   padding-top: 40px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
